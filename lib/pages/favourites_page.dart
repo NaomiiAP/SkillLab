@@ -7,13 +7,12 @@ import 'package:simple_todo/utils/todo_list.dart';
 class FavouritesPage extends StatelessWidget {
   final List<List<dynamic>> toDoList;
 
-  FavouritesPage({super.key, required this.toDoList});
+  const FavouritesPage({super.key, required this.toDoList});
 
   @override
   Widget build(BuildContext context) {
     List<List<dynamic>> favouritesList = toDoList.where((task) => task[2]).toList();
-
-    return Scaffold(
+      return Scaffold(
       backgroundColor: Colors.green.shade100,
       appBar: AppBar(
         title: const Text('Favourites'),
@@ -24,7 +23,7 @@ class FavouritesPage extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.green,
               ),
@@ -37,8 +36,8 @@ class FavouritesPage extends StatelessWidget {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home, color: Colors.green),
-              title: Text('Home'),
+              leading: const Icon(Icons.home, color: Colors.green),
+              title: const Text('Home'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.pushReplacement(
@@ -59,8 +58,8 @@ class FavouritesPage extends StatelessWidget {
               },
             ),
             ListTile(
-              leading: Icon(Icons.timer, color: Colors.green),
-              title: Text('Pomodoro'),
+              leading: const Icon(Icons.timer, color: Colors.green),
+              title: const Text('Pomodoro'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.pushReplacement(

@@ -1,12 +1,10 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:simple_todo/pages/favourites_page.dart';
 import 'package:simple_todo/pages/pomodoro_page.dart';
 import 'package:simple_todo/utils/todo_list.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -59,7 +57,7 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            DrawerHeader(
+            const DrawerHeader(
               decoration: BoxDecoration(
                 color: Colors.green,
               ),
@@ -72,19 +70,19 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             ListTile(
-              leading: Icon(Icons.home, color: Colors.green),
-              title: Text('Home'),
+              leading: const Icon(Icons.home, color: Colors.green),
+              title: const Text('Home'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => HomePage()),
+                  MaterialPageRoute(builder: (context) => const HomePage()),
                 );
               },
             ),
             ListTile(
-              leading: Icon(Icons.favorite, color: Colors.green),
-              title: Text('Favourites'),
+              leading: const Icon(Icons.favorite, color: Colors.green),
+              title: const Text('Favourites'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.pushReplacement(
@@ -94,8 +92,8 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              leading: Icon(Icons.timer, color: Colors.green),
-              title: Text('Pomodoro'),
+              leading: const Icon(Icons.timer, color: Colors.green),
+              title: const Text('Pomodoro'),
               onTap: () {
                 Navigator.pop(context); // Close the drawer
                 Navigator.pushReplacement(
@@ -160,4 +158,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-
